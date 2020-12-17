@@ -1,0 +1,92 @@
+.orderResume {
+    width: 100%;
+    border: 1px solid #ccc;
+    @media screen and (min-width: 783px) {
+        width: calc(40% - 20px);
+        margin-left: 20px;
+    }
+    @media screen and (min-width: 1100px) {
+        width: calc(30% - 20px);
+    }
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        height: 30px;
+        background-color: #dddddd;
+        line-height: 30px;
+        margin: 0;
+        text-align: center;
+    }
+    &__subtotal, &__total {
+        background-color: #dddddd;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 20px 30px;
+        &__title, &__value, &__send {
+            font-family: 'Montserrat', sans-serif;
+            width: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        &__value, &__send {
+            text-align: right;
+        }
+        &__value {
+            &::after {
+                content: '.00';
+                font-size: 10px;
+            }
+        }
+    }
+    &__edit {
+        text-align: right;
+        padding-right: 20px;
+        &__button {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            background: #d41b53;
+            color: white;
+            border: none;
+            padding: .5em 1.5em;
+        }
+    }
+    &__total {
+        background-color: black;
+        padding: 20px;
+        &__title, &__value {
+            color: white;
+        }
+    }
+    &__item {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #ccc;
+        &__image, &__name, &__price {
+            font-family: 'Montserrat', sans-serif;
+            width: 25%;
+            padding-left: 20px;
+            & > img {
+                width: 100%;
+            }
+        }
+        &__name {
+            width: 50%;
+            font-size: 10px;
+            margin: 0;
+            color: gray;
+        }
+        &__price {
+            font-size: 12px;
+            font-weight: 700;
+            &::after {
+                content: '.00';
+                font-size: 10px;
+            }
+        }
+    }
+}

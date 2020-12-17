@@ -1,0 +1,11 @@
+* { Box-sizing: Border-box }
+
+.checkout {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
